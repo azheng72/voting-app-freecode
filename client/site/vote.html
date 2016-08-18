@@ -1,0 +1,41 @@
+
+<html ng-app="vote">
+    <head>
+        <link rel="stylesheet" href="/client/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/client/css/main.css">
+        <script src="/client/js/angular.min.js"></script>
+        <script src="/client/js/angular-route.min.js"></script>
+        <script src="/client/js/angular-sanitize.min.js"></script>
+        <script src="/client/js/angular-cookies.min.js"></script>
+        <script src="/client/js/Chart.min.js"></script>
+        <script src="/client/js/angular-chart.min.js"></script>
+        <script type="text/javascript" src="/client/site/vote.controller.js"></script>
+
+    </head>
+    <body ng-controller='VoteController'>
+        <div class="pagehead center-block">
+            <div>
+                <span>Welcome </span>{{username}}
+            </div>
+        </div>
+        
+       
+        <div></div>{{update}}
+        
+        <div class='col-sm-6 col-sm-offset-3'>
+            <canvas id="bar" class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series" chart-options="chartOptions"></canvas>
+        </div>
+        
+        <select multiple class="form-control" ng-model='select.name' ng-change='change()'>
+          <option ng-repeat='lab in labels' >{{lab}}</option>
+         </select>
+         
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default" ng-click='submit()'>SUBMIT YOUR VOTE</button>
+          </div>
+        </div>
+
+
+    </body>
+</html>

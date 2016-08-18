@@ -1,0 +1,30 @@
+
+<div class="center-block" style="height:5vh" >
+    {{error}}{{word}}<a ng-href="{{url}}">{{url}}</a>
+</div>
+
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-danger" ng-click="$ctrl.submit()">Submit Pool</button>
+  </div>
+</div>
+
+
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Pool Name</span>
+  <input type="text" class="form-control" placeholder="Your Pool name" aria-describedby="basic-addon1" ng-model="$ctrl.pool.poolname">
+</div>
+
+<ul>
+    <li ng-repeat="opt in $ctrl.options">
+        <div class="input-group">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button" ng-click="$ctrl.delete($index)">delete</button>
+            </span>
+            <input type="text" class="form-control" placeholder="New Option" ng-model="opt.name">
+        </div>
+    </li>
+</ul>
+<button class="btn btn-default" type="button" ng-click="$ctrl.addOption()">Add Option</button>
+
+

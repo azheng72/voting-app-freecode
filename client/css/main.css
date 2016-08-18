@@ -1,0 +1,12 @@
+.center-block{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.pagehead{
+    height: 20vh;
+    margin-bottom: 10vh;
+    background-color: silver;
+    font-size: 5vh;
+
+}
