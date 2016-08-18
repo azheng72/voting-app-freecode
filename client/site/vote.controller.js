@@ -48,6 +48,7 @@ vote.controller('VoteController', ['$scope','$http','$cookies',function LoginCon
             .then(
                 function(res){
                     $scope.update="update success";
+                    location.reload();
                 },
                 function(err){
                     $scope.update="error";
